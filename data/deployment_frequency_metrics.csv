@@ -1,0 +1,13 @@
+Month,Period,Production_Deployments,Hotfix_Deployments,Total_Deployments,Avg_Days_Between_Deploys,Failed_Deployments,Rollback_Count,Success_Rate_Percent
+2025-01,Baseline,5,2,7,4.43,1,1,85.71
+2025-02,Baseline,4,2,6,4.67,1,1,83.33
+2025-03,Baseline,5,1,6,5.17,0,0,100.00
+2025-04,Transition,7,2,9,3.33,1,0,88.89
+2025-05,Transition,9,2,11,2.82,0,0,100.00
+2025-06,Transition,11,2,13,2.31,1,1,92.31
+2025-07,Post-Implementation,13,2,15,2.00,0,0,100.00
+2025-08,Post-Implementation,14,3,17,1.82,0,0,100.00
+2025-09,Post-Implementation,16,2,18,1.67,0,0,100.00
+2025-10,Post-Implementation,15,4,19,1.63,1,0,94.74
+2025-11,Post-Implementation,14,3,17,1.76,0,0,100.00
+2025-12,Post-Implementation,17,3,20,1.55,0,0,100.00

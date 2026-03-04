@@ -1,0 +1,13 @@
+Month,Period,Total_Merges,Conflicts_Detected,Conflict_Rate_Percent,Avg_Resolution_Time_Hours,Developer_Hours_Lost,Team_Size
+2025-01,Baseline,42,18,42.86,3.2,57.6,5
+2025-02,Baseline,38,16,42.11,3.4,54.4,5
+2025-03,Baseline,45,19,42.22,3.1,58.9,6
+2025-04,Transition,52,15,28.85,2.8,42.0,6
+2025-05,Transition,48,12,25.00,2.5,30.0,7
+2025-06,Transition,55,11,20.00,2.2,24.2,7
+2025-07,Post-Implementation,58,7,12.07,1.8,12.6,7
+2025-08,Post-Implementation,62,8,12.90,1.7,13.6,8
+2025-09,Post-Implementation,60,6,10.00,1.6,9.6,8
+2025-10,Post-Implementation,65,7,10.77,1.5,10.5,8
+2025-11,Post-Implementation,63,8,12.70,1.7,13.6,8
+2025-12,Post-Implementation,67,9,13.43,1.8,16.2,8

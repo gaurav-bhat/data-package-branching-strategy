@@ -1,0 +1,13 @@
+Month,Period,Total_PRs,Avg_PR_Review_Time_Hours,PRs_With_Conflicts,PR_Conflict_Rate_Percent,Avg_Review_Comments,PRs_Requiring_Rework,Rework_Rate_Percent
+2025-01,Baseline,42,18.5,12,28.57,8.3,15,35.71
+2025-02,Baseline,38,19.2,10,26.32,8.7,14,36.84
+2025-03,Baseline,45,17.8,13,28.89,8.1,16,35.56
+2025-04,Transition,52,14.3,9,17.31,7.2,12,23.08
+2025-05,Transition,48,12.8,7,14.58,6.8,10,20.83
+2025-06,Transition,55,10.5,6,10.91,6.2,8,14.55
+2025-07,Post-Implementation,58,8.2,4,6.90,5.5,5,8.62
+2025-08,Post-Implementation,62,7.8,3,4.84,5.2,4,6.45
+2025-09,Post-Implementation,60,7.5,3,5.00,5.0,4,6.67
+2025-10,Post-Implementation,65,7.2,4,6.15,4.8,5,7.69
+2025-11,Post-Implementation,63,7.6,3,4.76,5.1,4,6.35
+2025-12,Post-Implementation,67,7.0,4,5.97,4.9,5,7.46

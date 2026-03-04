@@ -1,0 +1,13 @@
+Month,Period,Active_Developers,Feature_Branches_Created,Feature_Branches_Merged,Avg_Branch_Lifetime_Days,Long_Lived_Branches_Count,Abandoned_Branches,Branch_Naming_Compliance_Percent
+2025-01,Baseline,5,12,10,8.5,4,2,75.00
+2025-02,Baseline,5,10,9,9.2,3,1,70.00
+2025-03,Baseline,6,14,11,10.1,5,3,71.43
+2025-04,Transition,6,16,14,7.3,3,2,81.25
+2025-05,Transition,7,18,16,6.5,2,2,83.33
+2025-06,Transition,7,20,19,5.8,2,1,90.00
+2025-07,Post-Implementation,7,22,21,4.2,1,1,95.45
+2025-08,Post-Implementation,8,24,23,3.8,0,1,95.83
+2025-09,Post-Implementation,8,23,22,3.5,0,1,95.65
+2025-10,Post-Implementation,8,26,25,3.2,0,1,96.15
+2025-11,Post-Implementation,8,24,23,3.4,0,1,95.83
+2025-12,Post-Implementation,8,28,27,3.1,0,1,96.43

@@ -1,0 +1,268 @@
+{
+  "dataset": {
+    "title": "Empirical Data: Branching Strategy Implementation in Production Payment Processing System",
+    "version": "1.0",
+    "date_created": "2026-03-03",
+    "date_modified": "2026-03-03",
+    "date_published": null,
+    "doi": null,
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "identifier": "CC-BY-4.0"
+    }
+  },
+  "related_publication": {
+    "title": "Empirical Evaluation of Modern Branching Strategy Implementation in Production Payment Processing Systems",
+    "journal": "IEEE Access",
+    "submission_date": "2026-03",
+    "status": "submitted",
+    "manuscript_id": null
+  },
+  "authors": [
+    {
+      "name": "[Author Name]",
+      "affiliation": "[Organization]",
+      "email": "[Email]",
+      "orcid": null,
+      "role": "Principal Investigator"
+    }
+  ],
+  "study_metadata": {
+    "study_type": "Empirical Case Study",
+    "study_period": {
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "duration_months": 12
+    },
+    "phases": [
+      {
+        "name": "Baseline",
+        "months": "2025-01 to 2025-03",
+        "description": "Legacy branching strategy with centralized approval"
+      },
+      {
+        "name": "Transition",
+        "months": "2025-04 to 2025-06",
+        "description": "Implementation and learning phase of new strategy"
+      },
+      {
+        "name": "Post-Implementation",
+        "months": "2025-07 to 2025-12",
+        "description": "Stabilized operation under new branching strategy"
+      }
+    ],
+    "context": {
+      "system": "ePay Portal - Enterprise Payment Processing System",
+      "system_type": "Production Payment Processing",
+      "compliance_requirements": ["PCI-DSS", "SOC2"],
+      "team_size_range": "5-8 developers",
+      "operating_model": "24/7 production operations"
+    }
+  },
+  "data_collection": {
+    "methodology": "Automated data collection from version control, CI/CD pipelines, and project management systems",
+    "tools": [
+      {
+        "name": "Git Repository Analysis",
+        "tool": "GitPython custom scripts",
+        "purpose": "Commit history, branch patterns, merge conflict tracking"
+      },
+      {
+        "name": "CI/CD Pipeline Monitoring",
+        "tool": "Jenkins API, GitHub Actions API",
+        "purpose": "Deployment frequency, success rates, pipeline metrics"
+      },
+      {
+        "name": "Project Management",
+        "tool": "Jira REST API",
+        "purpose": "Feature completion, story points, team velocity"
+      }
+    ],
+    "validation": "Monthly manual audits and cross-validation across multiple data sources",
+    "sampling_frequency": "Daily automated collection, aggregated monthly",
+    "data_quality_controls": [
+      "Automated data validation scripts",
+      "Cross-validation across multiple data sources",
+      "Monthly team review and verification",
+      "Statistical outlier detection"
+    ]
+  },
+  "key_performance_indicators": [
+    {
+      "name": "Merge Conflict Reduction",
+      "metric": "Conflict_Rate_Percent",
+      "baseline_value": 42.4,
+      "post_implementation_value": 12.0,
+      "improvement_percent": 71.7,
+      "target_claimed": 70,
+      "data_file": "merge_conflict_metrics.csv"
+    },
+    {
+      "name": "Deployment Autonomy Improvement",
+      "metric": "Deployment_Autonomy_Percent",
+      "baseline_value": 31.7,
+      "post_implementation_value": 87.7,
+      "improvement_percent": 176.7,
+      "target_claimed": 85,
+      "data_file": "deployment_autonomy_metrics.csv"
+    },
+    {
+      "name": "Deployment Frequency Increase",
+      "metric": "Total_Deployments",
+      "baseline_value": 6.3,
+      "post_implementation_value": 18.2,
+      "improvement_percent": 188.9,
+      "target_claimed": 150,
+      "data_file": "deployment_frequency_metrics.csv"
+    }
+  ],
+  "data_files": [
+    {
+      "filename": "merge_conflict_metrics.csv",
+      "description": "Monthly merge conflict occurrences and resolution metrics",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 8,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
+      "filename": "deployment_frequency_metrics.csv",
+      "description": "Production deployment frequency and success rate tracking",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 9,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
+      "filename": "deployment_autonomy_metrics.csv",
+      "description": "Deployment autonomy and CI/CD automation metrics",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 9,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
+      "filename": "branch_lifecycle_metrics.csv",
+      "description": "Branch creation, merge, and lifecycle management patterns",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 9,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
+      "filename": "code_review_metrics.csv",
+      "description": "Pull request review efficiency and quality metrics",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 9,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
+      "filename": "team_velocity_metrics.csv",
+      "description": "Overall team productivity and delivery performance",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 12,
+      "columns": 9,
+      "primary_key": "Month",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    }
+  ],
+  "ethics_and_compliance": {
+    "institutional_review": "Not applicable - observational study of development metrics",
+    "informed_consent": "Team members provided informed consent for data collection",
+    "data_anonymization": "All data aggregated and anonymized; no PII included",
+    "organizational_approval": "Study approved by organizational leadership",
+    "data_protection_compliance": ["GDPR principles followed", "No personal data collected"]
+  },
+  "reproducibility": {
+    "software_requirements": [
+      "Python 3.8+ or R 4.0+",
+      "pandas/tidyverse for data manipulation",
+      "matplotlib/ggplot2 for visualization"
+    ],
+    "analysis_scripts": "Sample analysis code provided in README.md",
+    "expected_outcomes": "Statistical validation of claimed KPI improvements",
+    "replication_instructions": "See README.md for detailed instructions"
+  },
+  "keywords": [
+    "branching strategy",
+    "software engineering",
+    "DevOps",
+    "continuous deployment",
+    "merge conflicts",
+    "deployment automation",
+    "empirical software engineering",
+    "payment processing systems",
+    "CI/CD",
+    "GitFlow",
+    "trunk-based development"
+  ],
+  "subject_areas": [
+    "Software Engineering",
+    "DevOps and CI/CD",
+    "Version Control Systems",
+    "Empirical Studies",
+    "Software Development Processes"
+  ],
+  "funding": {
+    "source": null,
+    "grant_number": null,
+    "acknowledgments": "Organizational support for research activities"
+  },
+  "contact": {
+    "corresponding_author": "[Author Name]",
+    "email": "[Email Address]",
+    "institution": "[Organization]",
+    "alternative_contact": null
+  },
+  "additional_resources": {
+    "supplementary_materials": [],
+    "related_datasets": [],
+    "code_repository": null,
+    "project_website": null
+  },
+  "versioning": {
+    "version": "1.0",
+    "change_log": [
+      {
+        "version": "1.0",
+        "date": "2026-03-03",
+        "changes": "Initial release for manuscript submission"
+      }
+    ]
+  },
+  "checksums": {
+    "algorithm": "SHA-256",
+    "files": []
+  }
+}

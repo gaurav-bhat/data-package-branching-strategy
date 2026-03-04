@@ -1,0 +1,13 @@
+Month,Period,Team_Size,Completed_Features,Bug_Fix_Deployments,Avg_Feature_Completion_Days,Deployment_Lead_Time_Hours,MTTR_Minutes,Development_Velocity_Story_Points
+2025-01,Baseline,5,8,12,15.2,96.5,145,42
+2025-02,Baseline,5,7,10,16.8,102.3,138,38
+2025-03,Baseline,6,9,11,14.5,98.7,142,45
+2025-04,Transition,6,11,13,12.3,78.5,120,52
+2025-05,Transition,7,13,14,10.8,65.2,98,58
+2025-06,Transition,7,14,12,9.5,52.8,85,62
+2025-07,Post-Implementation,7,16,13,7.2,38.5,62,68
+2025-08,Post-Implementation,8,18,15,6.8,35.2,58,72
+2025-09,Post-Implementation,8,17,14,6.5,32.8,55,70
+2025-10,Post-Implementation,8,19,16,6.2,31.5,52,75
+2025-11,Post-Implementation,8,18,15,6.4,33.2,54,73
+2025-12,Post-Implementation,8,20,17,6.0,30.8,50,78
