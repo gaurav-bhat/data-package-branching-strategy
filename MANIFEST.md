@@ -2,7 +2,7 @@
 
 ## Package Information
 
-**Package Name:** IEEE_Data_Package_ePay_Branching_Strategy  
+**Package Name:** IEEE_Data_Package_Pay_Branching_Strategy  
 **Version:** 1.0  
 **Date Created:** March 3, 2026  
 **Purpose:** Supporting data for IEEE Access manuscript submission  

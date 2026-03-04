@@ -1,15 +1,15 @@
-@article{epay_branching_strategy_2026,
-  title={Empirical Evaluation of Modern Branching Strategy Implementation in Production Payment Processing Systems},
-  author={[Author Name(s)]},
+@article{pay_branching_strategy_2026,
+  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
+  author={Gaurav B.},
   journal={IEEE Access},
   year={2026},
   publisher={IEEE},
   note={Manuscript submitted for review}
 }
 
-@dataset{epay_branching_data_2026,
-  title={Empirical Data: Branching Strategy Implementation in Production Payment Processing System},
-  author={[Author Name(s)]},
+@dataset{pay_branching_data_2026,
+  title={Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
+  author={Gaurav B.},
   year={2026},
   version={1.0},
   howpublished={Data package accompanying IEEE Access manuscript submission},
@@ -20,32 +20,32 @@
 
 # Plain Text Citation
 
-[Author Name(s)]. (2026). Empirical Evaluation of Modern Branching Strategy Implementation 
-in Production Payment Processing Systems. IEEE Access. [Manuscript submitted for review]
+Gaurav B. (2026). A Policy-Driven Branching and Environment Isolation Strategy for 
+Enterprise DevSecOps Deployments. IEEE Access. [Manuscript submitted for review]
 
-Dataset: Empirical Data: Branching Strategy Implementation in Production Payment Processing 
-System, Version 1.0. 2026. Available from: [URL to be provided]
+Dataset: Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for 
+Enterprise DevSecOps Deployments, Version 1.0. 2026. Available from: [URL to be provided]
 
 ---
 
 # APA Style
 
-Author(s). (2026). Empirical evaluation of modern branching strategy implementation in 
-production payment processing systems. IEEE Access.
+Gaurav B. (2026). A Policy-Driven Branching and Environment Isolation Strategy for 
+Enterprise DevSecOps Deployments. IEEE Access.
 
 ---
 
 # IEEE Style
 
-[Author Name(s)], "Empirical Evaluation of Modern Branching Strategy Implementation in 
-Production Payment Processing Systems," IEEE Access, 2026.
+Gaurav B., "A Policy-Driven Branching and Environment Isolation Strategy for 
+Enterprise DevSecOps Deployments," IEEE Access, 2026.
 
 ---
 
 # Harvard Style
 
-Author(s) (2026) 'Empirical evaluation of modern branching strategy implementation in 
-production payment processing systems', IEEE Access.
+Gaurav B. (2026) 'A Policy-Driven Branching and Environment Isolation Strategy for 
+Enterprise DevSecOps Deployments', IEEE Access.
 
 ---
 
@@ -63,7 +63,7 @@ If citing this work, please highlight:
 
 # Acknowledgments
 
-This research was conducted as part of the ePay Portal development team's continuous 
+This research was conducted as part of the Pay Portal development team's continuous 
 improvement initiatives. We thank all team members who participated in the study.
 
 ---

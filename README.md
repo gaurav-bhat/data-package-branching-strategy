@@ -2,10 +2,10 @@
 
 ## Overview
 
-This data package accompanies the manuscript submitted to IEEE Access titled "Empirical Evaluation of Modern Branching Strategy Implementation in Production Payment Processing Systems" (or similar).
+This data package accompanies the manuscript submitted to IEEE Access titled "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments".
 
 **Study Period:** January 2025 - December 2025 (12 months)  
-**System:** ePay Portal - Enterprise Payment Processing System  
+**System:** Pay Portal - Enterprise Payment Processing System  
 **Team Size:** 5-8 developers  
 **Data Collection Method:** Automated metrics from Git, CI/CD pipelines, and project management tools
 
@@ -136,9 +136,9 @@ This dataset is made available to support research reproducibility for the submi
 ## Contact Information
 
 For questions about this data package, please contact:
-- **Corresponding Author:** [Your Name]
-- **Email:** [Your Email]
-- **Institution/Organization:** [Your Organization]
+- **Corresponding Author:** Gaurav B.
+- **Email:** gaurav.bhat@gmail.com
+- **Institution/Organization:** Open Text Corporation
 
 ## Citation
 
@@ -146,7 +146,7 @@ If you use this dataset, please cite:
 
 ```bibtex
 @article{yourname2026branching,
-  title={Empirical Evaluation of Modern Branching Strategy Implementation in Production Payment Processing Systems},
+  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
   author={[Your Name] and [Co-authors]},
   journal={IEEE Access},
   year={2026},

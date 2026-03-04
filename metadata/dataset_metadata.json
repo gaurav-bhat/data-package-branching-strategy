@@ -13,7 +13,7 @@
     }
   },
   "related_publication": {
-    "title": "Empirical Evaluation of Modern Branching Strategy Implementation in Production Payment Processing Systems",
+    "title": "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments",
     "journal": "IEEE Access",
     "submission_date": "2026-03",
     "status": "submitted",
@@ -21,9 +21,9 @@
   },
   "authors": [
     {
-      "name": "[Author Name]",
-      "affiliation": "[Organization]",
-      "email": "[Email]",
+      "name": "Gaurav B.",
+      "affiliation": "Open Text Corporation",
+      "email": "gaurav.bhat@gmail.com",
       "orcid": null,
       "role": "Principal Investigator"
     }
@@ -53,7 +53,7 @@
       }
     ],
     "context": {
-      "system": "ePay Portal - Enterprise Payment Processing System",
+      "system": "Pay Portal - Enterprise Payment Processing System",
       "system_type": "Production Payment Processing",
       "compliance_requirements": ["PCI-DSS", "SOC2"],
       "team_size_range": "5-8 developers",
@@ -240,9 +240,9 @@
     "acknowledgments": "Organizational support for research activities"
   },
   "contact": {
-    "corresponding_author": "[Author Name]",
-    "email": "[Email Address]",
-    "institution": "[Organization]",
+    "corresponding_author": "Gaurav B.",
+    "email": "gaurav.bhat@gmail.com",
+    "institution": "Open Text Corporation",
     "alternative_contact": null
   },
   "additional_resources": {

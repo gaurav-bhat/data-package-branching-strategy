@@ -27,7 +27,7 @@ This guide helps manuscript reviewers and researchers quickly understand, valida
 ## 📁 File Structure
 
 ```
-IEEE_Data_Package_ePay_Branching_Strategy/
+IEEE_Data_Package_Pay_Branching_Strategy/
 ├── README.md                          ← Start here
 ├── STATISTICAL_SUMMARY.md             ← Validation calculations
 ├── CITATION.txt                       ← How to cite
