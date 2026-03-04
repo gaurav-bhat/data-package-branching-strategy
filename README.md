@@ -165,5 +165,6 @@ We thank the development team members who participated in this study and the org
 ---
 
 **Last Updated:** March 3, 2026  
-**Dataset Version:** 1.0  
-**Dataset DOI:** [To be assigned upon publication]
+**Dataset Version:** v1.0.1-ieee-access-submission  
+**Dataset DOI:** 10.5281/zenodo.18860898
+
