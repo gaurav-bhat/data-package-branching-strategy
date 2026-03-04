@@ -2,7 +2,7 @@
 
 ## Overview
 
-This data package accompanies the manuscript submitted to IEEE Access titled "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments".
+This data package supports the manuscript submitted to IEEE Access titled "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments.
 
 **Study Period:** January 2025 - December 2025 (12 months)  
 **System:** Pay Portal - Enterprise Payment Processing System  
