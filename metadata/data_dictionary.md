@@ -16,7 +16,7 @@ Records monthly merge conflict occurrences and their impact on development produ
 | Period | String | Categorical | Study phase identifier | Baseline, Transition, Post-Implementation |
 | Total_Merges | Integer | Count | Total number of merge operations performed | 0-1000 |
 | Conflicts_Detected | Integer | Count | Number of merges that resulted in conflicts | 0-Total_Merges |
-| Conflict_Rate_Percent | Float | Percentage | Percentage of merges with conflicts (Conflicts_Detected/Total_Merges × 100) | 0.00-100.00 |
+| Conflict_Rate_Percent | Float | Percentage | Merge Conflict Rate: MCR = (C_conflict / C_total) × 100, where C_conflict = Conflicts_Detected and C_total = Total_Merges. Corresponds to MCR as formally defined in the manuscript. | 0.00-100.00 |
 | Avg_Resolution_Time_Hours | Float | Hours | Average time spent resolving each conflict | 0.0-24.0 |
 | Developer_Hours_Lost | Float | Hours | Total developer time spent on conflict resolution (Conflicts_Detected × Avg_Resolution_Time_Hours) | 0.0-1000.0 |
 | Team_Size | Integer | Count | Number of active developers during the month | 5-8 |
@@ -35,7 +35,7 @@ Tracks deployment frequency, success rates, and reliability metrics.
 | Period | String | Categorical | Study phase identifier | Baseline, Transition, Post-Implementation |
 | Production_Deployments | Integer | Count | Number of scheduled production deployments | 0-100 |
 | Hotfix_Deployments | Integer | Count | Number of emergency/hotfix deployments | 0-50 |
-| Total_Deployments | Integer | Count | Sum of production and hotfix deployments (KPI basis — unchanged) | 0-150 |
+| Total_Deployments | Integer | Count | Sum of authorized production releases within the month (Production_Deployments + Hotfix_Deployments). Used to compute Deployment Frequency: DF̄ = (1/n) Σ Rᵢ, where Rᵢ is the deployment count for month i and n is the number of months in the period. KPI basis — unchanged. | 0-150 |
 | Feature_Dev_Deployments | Integer | Count | Feature-branch deployments to dev/sandbox environment (manually triggered by developers via GitLab CI; previously excluded, now included for full dataset transparency) | 0-50 |
 | Total_All_Deployments | Integer | Count | Sum of all deployment events across all environments (Total_Deployments + Feature_Dev_Deployments); corresponds to the 214-event dataset cited in the manuscript | 0-200 |
 | Avg_Days_Between_Deploys | Float | Days | Average number of days between deployments (30/Total_Deployments) | 0.0-30.0 |
@@ -59,7 +59,7 @@ Measures the degree of automation and autonomy in the deployment process.
 | Autonomous_Deployments | Integer | Count | Deployments completed without manual approval | 0-Total_Deployments |
 | Manual_Approval_Required | Integer | Count | Deployments requiring manual approval/intervention | 0-Total_Deployments |
 | Deployment_Autonomy_Percent | Float | Percentage | Percentage of autonomous deployments (Autonomous/Total × 100) | 0.00-100.00 |
-| Avg_Approval_Wait_Hours | Float | Hours | Average wait time for manual approvals | 0.0-48.0 |
+| Avg_Approval_Wait_Hours | Float | Hours | Approval Wait Time (AWT): formally defined as ΔT = T_auth − T_ready, where T_ready is the timestamp of a successful UAT pass and T_auth is the timestamp of manual production gate authorization (deploy-prod trigger in GitLab CI). Averaged across all manual-approval deployments in the month. | 0.0-48.0 |
 | Total_Wait_Time_Hours | Float | Hours | Cumulative wait time for all manual approvals | 0.0-500.0 |
 | CI_CD_Pipeline_Success_Rate | Float | Percentage | Percentage of CI/CD pipeline runs that succeeded | 0.00-100.00 |
 
@@ -127,12 +127,25 @@ Measures overall team productivity and delivery metrics.
 
 ---
 
+## Formal KPI Definitions
+
+The following formal definitions are taken directly from the manuscript (Section: Metric Formalization and Definitions) and map to the CSV fields in this dataset.
+
+| KPI | Formal Definition | CSV Column | File |
+|-----|------------------|------------|------|
+| Approval Wait Time (AWT) | ΔT = T_auth − T_ready, where T_ready = timestamp of successful UAT pass; T_auth = timestamp of manual deploy-prod gate authorization | Avg_Approval_Wait_Hours | deployment_autonomy_metrics.csv |
+| Merge Conflict Rate (MCR) | MCR = (C_conflict / C_total) × 100, where C_conflict = Conflicts_Detected; C_total = Total_Merges | Conflict_Rate_Percent | merge_conflict_metrics.csv |
+| Deployment Frequency (DF) | DF̄ = (1/n) Σ Rᵢ — mean authorized production releases per 30-day telemetry window | Total_Deployments | deployment_frequency_metrics.csv |
+
+---
+
 ## Calculated Fields
 
 Several fields are calculated from other fields. Here are the formulas:
 
 ### merge_conflict_metrics.csv
 ```
+# Formal: MCR = (C_conflict / C_total) × 100
 Conflict_Rate_Percent = (Conflicts_Detected / Total_Merges) × 100
 Developer_Hours_Lost = Conflicts_Detected × Avg_Resolution_Time_Hours
 ```
@@ -146,6 +159,7 @@ Success_Rate_Percent = ((Total_Deployments - Failed_Deployments) / Total_Deploym
 
 ### deployment_autonomy_metrics.csv
 ```
+# Formal: AWT = ΔT = T_auth − T_ready (per deployment, then averaged)
 Total_Deployments = Autonomous_Deployments + Manual_Approval_Required
 Deployment_Autonomy_Percent = (Autonomous_Deployments / Total_Deployments) × 100
 Total_Wait_Time_Hours = Manual_Approval_Required × Avg_Approval_Wait_Hours
@@ -172,7 +186,7 @@ Rework_Rate_Percent = (PRs_Requiring_Rework / Total_PRs) × 100
 ## Measurement Tools
 
 - **Git Analysis:** Custom Python scripts using GitPython library
-- **CI/CD Metrics:** Jenkins API and GitHub Actions API
+- **CI/CD Metrics:** GitLab CI/CD API (pipeline execution logs; 214 deployment events)
 - **Team Velocity:** Jira REST API
 - **Aggregation:** Pandas data frames with monthly rollups
 
