@@ -30,6 +30,7 @@
 | merge_conflict_metrics.csv | 12 | 8 | Monthly merge conflict occurrences and resolution metrics | ⭐ KPI #1 |
 | deployment_frequency_metrics.csv | 12 | 11 | Production deployment frequency and success rates (now includes Feature_Dev_Deployments and Total_All_Deployments columns) | ⭐ KPI #3 |
 | deployment_autonomy_metrics.csv | 12 | 9 | Deployment autonomy and CI/CD automation metrics | ⭐ KPI #2 |
+| security_incident_metrics.csv | 2 | 5 | Pre-production security incident counts by category (supports Table III) | Supporting |
 | branch_lifecycle_metrics.csv | 12 | 9 | Branch creation, merge, and lifecycle patterns | Supporting |
 | code_review_metrics.csv | 12 | 9 | Pull request review efficiency and quality | Supporting |
 | team_velocity_metrics.csv | 12 | 9 | Overall team productivity and delivery performance | Supporting |
@@ -45,8 +46,8 @@
 
 ## Package Statistics
 
-- **Total Files:** 13
-- **Total CSV Data Files:** 6
+- **Total Files:** 14
+- **Total CSV Data Files:** 7
 - **Total Documentation Files:** 7
 - **Total Data Rows:** 72 (12 months × 6 files)
 - **Study Duration:** 12 months (January - December 2025)

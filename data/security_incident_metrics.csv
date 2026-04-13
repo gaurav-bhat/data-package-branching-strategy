@@ -1,0 +1,3 @@
+Period,Unauthorized_Config_Drift,Unscanned_Container_Images,Secret_Leakage_Precommit,Total_Security_Incidents
+Baseline (Months 1-3),14,9,12,35
+Post-Implementation (Months 7-12),2,0,10,12

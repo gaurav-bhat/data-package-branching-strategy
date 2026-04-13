@@ -166,6 +166,19 @@
       "missing_values": "None"
     },
     {
+      "filename": "security_incident_metrics.csv",
+      "description": "Pre-production security incidents aggregated by study period (Baseline vs. Post-Implementation). Supports Table III (Security Outcome Metrics) in the manuscript. Covers three categories: Unauthorized Config Drift (−85.7%), Unscanned Container Images (−100%), Secret Leakage Pre-commit (−16.7%). Total incidents reduced from 35 to 12 (−65.7%).",
+      "format": "CSV",
+      "size_bytes": null,
+      "rows": 2,
+      "columns": 5,
+      "primary_key": "Period",
+      "encoding": "UTF-8",
+      "delimiter": ",",
+      "header_row": true,
+      "missing_values": "None"
+    },
+    {
       "filename": "branch_lifecycle_metrics.csv",
       "description": "Branch creation, merge, and lifecycle management patterns",
       "format": "CSV",

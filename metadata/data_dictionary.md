@@ -67,7 +67,28 @@ Measures the degree of automation and autonomy in the deployment process.
 
 ---
 
-## 4. branch_lifecycle_metrics.csv
+## 4. security_incident_metrics.csv
+
+Records pre-production security incidents by category, aggregated over the Baseline and Post-Implementation study periods. Supports Table III (Security Outcome Metrics) in the manuscript.
+
+| Field Name | Data Type | Unit | Description | Range/Values |
+|------------|-----------|------|-------------|--------------|
+| Period | String | Categorical | Study phase (aggregated) | Baseline (Months 1-3), Post-Implementation (Months 7-12) |
+| Unauthorized_Config_Drift | Integer | Count | Incidents where environment configuration diverged from the approved state without an authorized change record (policy violation per PCI DSS v4.0 Req. 6.4.2) | 0-100 |
+| Unscanned_Container_Images | Integer | Count | Container images promoted to pre-production without a passing security scan gate | 0-100 |
+| Secret_Leakage_Precommit | Integer | Count | Incidents where credentials or secrets were detected in committed code before the pre-commit hook or pipeline scan intercepted them | 0-100 |
+| Total_Security_Incidents | Integer | Count | Sum of all three incident categories (Unauthorized_Config_Drift + Unscanned_Container_Images + Secret_Leakage_Precommit) | 0-300 |
+
+**Notes:**
+- Transition period (Months 4–6) is excluded as it represents a mixed-strategy state not suitable for clean baseline/proposed comparison.
+- Unauthorized_Config_Drift and Unscanned_Container_Images were eliminated entirely by the deterministic CI/CD policy gates (deploy-prod manual trigger + mandatory scanner stage).
+- Secret_Leakage_Precommit reduction is partial (−16.7%) as pre-commit hook enforcement was introduced mid-transition and is not strictly gated by the branching strategy itself.
+
+**Supports:** Table III (Security Outcome Metrics: Pre-production Incident Breakdown) in the manuscript.
+
+---
+
+## 6. branch_lifecycle_metrics.csv
 
 Tracks branch creation, lifecycle, and management patterns.
 
@@ -87,7 +108,7 @@ Tracks branch creation, lifecycle, and management patterns.
 
 ---
 
-## 5. code_review_metrics.csv
+## 7. code_review_metrics.csv
 
 Captures code review quality, efficiency, and conflict detection during review phase.
 
@@ -107,7 +128,7 @@ Captures code review quality, efficiency, and conflict detection during review p
 
 ---
 
-## 6. team_velocity_metrics.csv
+## 8. team_velocity_metrics.csv
 
 Measures overall team productivity and delivery metrics.
 
