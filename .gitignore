@@ -1,1 +1,52 @@
 SUBMISSION_CHECKLIST.md
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Jupyter
+*.ipynb_checkpoints
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Generated output
+kpi_validation.png
+*.log
+
+# Zip / archives
+*.zip
+*.tar.gz
+*.tar

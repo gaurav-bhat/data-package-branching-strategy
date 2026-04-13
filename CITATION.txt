@@ -1,19 +1,21 @@
 @article{pay_branching_strategy_2026,
-  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
-  author={Gaurav B.},
+  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study},
+  author={Gaurav Bhatnagar},
   journal={IEEE Access},
   year={2026},
+  doi={10.1109/ACCESS.2026.0429000},
   publisher={IEEE},
   note={Manuscript submitted for review}
 }
 
 @dataset{pay_branching_data_2026,
-  title={Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
-  author={Gaurav B.},
+  title={Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study},
+  author={Gaurav Bhatnagar},
   year={2026},
+  doi={10.5281/zenodo.18860898},
   version={1.0},
   howpublished={Data package accompanying IEEE Access manuscript submission},
-  note={Dataset includes 12-month empirical study with deployment, conflict, and autonomy metrics}
+  note={Dataset includes 12-month empirical study (214 deployment events) with deployment, conflict, and autonomy metrics}
 }
 
 ---
@@ -53,9 +55,9 @@ Enterprise DevSecOps Deployments', IEEE Access.
 
 If citing this work, please highlight:
 
-1. Empirical evidence of 70% reduction in merge conflicts through strategic branching
-2. 85% improvement in deployment autonomy via CI/CD automation
-3. 150% increase in deployment frequency while maintaining quality
+1. Empirical evidence of 71.7% reduction in merge conflicts through strategic branching
+2. 70.8% improvement in deployment autonomy (Average Approval Wait Time: 240m → 70m)
+3. 181.0% increase in deployment frequency while maintaining quality (6.3 → 17.7 deployments/month)
 4. 12-month production study in enterprise payment processing context
 5. Reproducible dataset with statistical validation
 

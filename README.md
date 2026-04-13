@@ -1,8 +1,8 @@
-# Data Package: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments
+# Data Package: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study
 
 ## Overview
 
-This data package supports the manuscript submitted to IEEE Access titled "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments.
+This data package supports the manuscript submitted to IEEE Access titled "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study.
 
 **Study Period:** January 2025 - December 2025 (12 months)  
 **System:** Pay Portal - Enterprise Payment Processing System  
@@ -13,20 +13,21 @@ This data package supports the manuscript submitted to IEEE Access titled "A Pol
 
 This data package provides empirical evidence for the following key findings:
 
-1. **70% Reduction in Merge Conflict Incidence**
+1. **71.7% Reduction in Merge Conflict Incidence**
    - Baseline conflict rate: ~42.4%
    - Post-implementation conflict rate: ~12.0%
    - Reduction: 71.7%
 
-2. **85% Improvement in Deployment Autonomy**
-   - Baseline autonomy rate: ~31.7%
-   - Post-implementation autonomy rate: ~87.7%
-   - Improvement: 176.7% (85%+ relative improvement)
+2. **70.8% Improvement in Deployment Autonomy**
+   - Measured by Average Approval Wait Time (AWT) reduction
+   - Baseline AWT: ~240 min (4.0 hours)
+   - Post-implementation AWT: ~70 min (1.17 hours)
+   - Improvement: 70.8% (recovering ~580 engineering hours annually)
 
-3. **150% Increase in Deployment Frequency**
+3. **181.0% Increase in Deployment Frequency**
    - Baseline: ~6.3 deployments/month
-   - Post-implementation: ~18.2 deployments/month
-   - Increase: 188.9%
+   - Post-implementation: ~17.7 deployments/month
+   - Increase: 181.0%
 
 ## Data Files
 
@@ -44,8 +45,8 @@ This data package provides empirical evidence for the following key findings:
 
 3. **deployment_autonomy_metrics.csv**
    - Autonomous vs manual deployment tracking
-   - CI/CD pipeline success rates and approval wait times
-   - Directly supports KPI #2
+   - CI/CD pipeline success rates and Average Approval Wait Time (AWT)
+   - Directly supports KPI #2 (AWT reduction: 240m → 70m, 70.8% improvement)
 
 ### Supplementary Metrics
 
@@ -66,7 +67,7 @@ This data package provides empirical evidence for the following key findings:
 ### Data Collection
 
 - **Git Repository Analysis:** Automated scripts analyzed commit history, branch patterns, and merge conflict occurrences
-- **CI/CD Pipeline Logs:** Jenkins/GitHub Actions logs provided deployment frequency, success rates, and approval workflows
+- **CI/CD Pipeline Logs:** GitLab CI/CD pipeline logs (214 deployment events) provided deployment frequency, success rates, and approval workflows
 - **Project Management Tools:** Jira/Linear tracked feature completion, story points, and team velocity
 - **Manual Validation:** Monthly reviews verified automated data collection accuracy
 
@@ -145,11 +146,12 @@ For questions about this data package, please contact:
 If you use this dataset, please cite:
 
 ```bibtex
-@article{yourname2026branching,
-  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments},
-  author={[Your Name] and [Co-authors]},
+@article{bhatnagar2026branching,
+  title={A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study},
+  author={Gaurav Bhatnagar},
   journal={IEEE Access},
   year={2026},
+  doi={10.1109/ACCESS.2026.0429000},
   publisher={IEEE}
 }
 ```

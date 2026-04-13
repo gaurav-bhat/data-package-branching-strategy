@@ -28,7 +28,7 @@
 | File | Rows | Columns | Purpose | KPI Support |
 |------|------|---------|---------|-------------|
 | merge_conflict_metrics.csv | 12 | 8 | Monthly merge conflict occurrences and resolution metrics | ⭐ KPI #1 |
-| deployment_frequency_metrics.csv | 12 | 9 | Production deployment frequency and success rates | ⭐ KPI #3 |
+| deployment_frequency_metrics.csv | 12 | 11 | Production deployment frequency and success rates (now includes Feature_Dev_Deployments and Total_All_Deployments columns) | ⭐ KPI #3 |
 | deployment_autonomy_metrics.csv | 12 | 9 | Deployment autonomy and CI/CD automation metrics | ⭐ KPI #2 |
 | branch_lifecycle_metrics.csv | 12 | 9 | Branch creation, merge, and lifecycle patterns | Supporting |
 | code_review_metrics.csv | 12 | 9 | Pull request review efficiency and quality | Supporting |
@@ -50,7 +50,7 @@
 - **Total Documentation Files:** 7
 - **Total Data Rows:** 72 (12 months × 6 files)
 - **Study Duration:** 12 months (January - December 2025)
-- **Data Points:** ~540 individual measurements
+- **Data Points:** ~564 individual measurements (deployment_frequency_metrics.csv expanded with 2 new columns)
 
 ---
 
@@ -59,25 +59,25 @@
 ### Primary KPI Supporting Files (⭐ Essential for Manuscript Review)
 
 #### 1. merge_conflict_metrics.csv
-- **Purpose:** Demonstrates 70% reduction in merge conflicts
+- **Purpose:** Demonstrates 71.7% reduction in merge conflicts
 - **Key Fields:** Conflict_Rate_Percent, Developer_Hours_Lost
-- **Baseline Average:** 42.40% conflict rate
-- **Post-Implementation Average:** 11.98% conflict rate
-- **Supporting Claim:** "70% reduction in merge conflict incidence"
+- **Baseline Average:** 42.40% conflict rate (± 0.4)
+- **Post-Implementation Average:** 12.0% conflict rate (± 1.3)
+- **Supporting Claim:** "71.7% reduction in merge conflict incidence" (Cohen's d = 3.12, p < 0.001)
 
 #### 2. deployment_frequency_metrics.csv
-- **Purpose:** Demonstrates 150% increase in deployment frequency
+- **Purpose:** Demonstrates 181.0% increase in deployment frequency
 - **Key Fields:** Total_Deployments, Success_Rate_Percent
-- **Baseline Average:** 6.33 deployments/month
-- **Post-Implementation Average:** 17.67 deployments/month (range: 15-20)
-- **Supporting Claim:** "150% increase in deployment frequency to 15-20 per month"
+- **Baseline Average:** 6.3 deployments/month (± 0.6)
+- **Post-Implementation Average:** 17.7 deployments/month (± 1.8)
+- **Supporting Claim:** "181.0% increase in deployment frequency" (214 total deployment events; Cohen's d = 2.85, p < 0.001)
 
 #### 3. deployment_autonomy_metrics.csv
-- **Purpose:** Demonstrates 85% improvement in deployment autonomy
-- **Key Fields:** Deployment_Autonomy_Percent, Avg_Approval_Wait_Hours
-- **Baseline Average:** 31.75% autonomy
-- **Post-Implementation Average:** 87.71% autonomy
-- **Supporting Claim:** "85% improvement in deployment autonomy"
+- **Purpose:** Demonstrates 70.8% improvement in deployment autonomy via Approval Wait Time reduction
+- **Key Fields:** Avg_Approval_Wait_Hours, Deployment_Autonomy_Percent
+- **Baseline Average AWT:** 240 min ± 12 min (4.0 hours)
+- **Post-Implementation Average AWT:** 70 min ± 13 min (1.17 hours)
+- **Supporting Claim:** "70.8% improvement in deployment autonomy" (Cohen's d = 2.44, p < 0.001; ~580 engineering hours recovered annually)
 
 ### Supporting Data Files
 

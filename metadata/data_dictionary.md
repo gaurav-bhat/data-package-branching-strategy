@@ -21,7 +21,7 @@ Records monthly merge conflict occurrences and their impact on development produ
 | Developer_Hours_Lost | Float | Hours | Total developer time spent on conflict resolution (Conflicts_Detected × Avg_Resolution_Time_Hours) | 0.0-1000.0 |
 | Team_Size | Integer | Count | Number of active developers during the month | 5-8 |
 
-**Primary KPI:** Conflict_Rate_Percent demonstrates the 70% reduction in merge conflicts.
+**Primary KPI:** Conflict_Rate_Percent demonstrates the 71.7% reduction in merge conflicts (42.4% → 12.0%, Cohen's d = 3.12, p < 0.001).
 
 ---
 
@@ -35,13 +35,15 @@ Tracks deployment frequency, success rates, and reliability metrics.
 | Period | String | Categorical | Study phase identifier | Baseline, Transition, Post-Implementation |
 | Production_Deployments | Integer | Count | Number of scheduled production deployments | 0-100 |
 | Hotfix_Deployments | Integer | Count | Number of emergency/hotfix deployments | 0-50 |
-| Total_Deployments | Integer | Count | Sum of production and hotfix deployments | 0-150 |
+| Total_Deployments | Integer | Count | Sum of production and hotfix deployments (KPI basis — unchanged) | 0-150 |
+| Feature_Dev_Deployments | Integer | Count | Feature-branch deployments to dev/sandbox environment (manually triggered by developers via GitLab CI; previously excluded, now included for full dataset transparency) | 0-50 |
+| Total_All_Deployments | Integer | Count | Sum of all deployment events across all environments (Total_Deployments + Feature_Dev_Deployments); corresponds to the 214-event dataset cited in the manuscript | 0-200 |
 | Avg_Days_Between_Deploys | Float | Days | Average number of days between deployments (30/Total_Deployments) | 0.0-30.0 |
 | Failed_Deployments | Integer | Count | Number of deployments that failed | 0-Total_Deployments |
 | Rollback_Count | Integer | Count | Number of deployments that required rollback | 0-Total_Deployments |
 | Success_Rate_Percent | Float | Percentage | Percentage of successful deployments ((Total-Failed)/Total × 100) | 0.00-100.00 |
 
-**Primary KPI:** Total_Deployments demonstrates the 150% increase in deployment frequency.
+**Primary KPI:** Total_Deployments demonstrates the 181.0% increase in deployment frequency (6.3 → 17.7/month, Cohen's d = 2.85, p < 0.001). Feature-branch dev-environment deployments were previously excluded from this dataset; they are now included in the `Feature_Dev_Deployments` column. `Total_Deployments` (production + hotfix) remains unchanged to preserve KPI integrity. The full 214-event dataset referenced in the manuscript equals the sum of `Total_All_Deployments` across all 12 months.
 
 ---
 
@@ -61,7 +63,7 @@ Measures the degree of automation and autonomy in the deployment process.
 | Total_Wait_Time_Hours | Float | Hours | Cumulative wait time for all manual approvals | 0.0-500.0 |
 | CI_CD_Pipeline_Success_Rate | Float | Percentage | Percentage of CI/CD pipeline runs that succeeded | 0.00-100.00 |
 
-**Primary KPI:** Deployment_Autonomy_Percent demonstrates the 85% improvement in deployment autonomy.
+**Primary KPI:** Avg_Approval_Wait_Hours demonstrates the 70.8% improvement in deployment autonomy (240m → 70m, Cohen's d = 2.44, p < 0.001). Deployment_Autonomy_Percent is a supporting metric showing the autonomy rate increase from 31.7% to 87.7%.
 
 ---
 

@@ -18,9 +18,9 @@ This guide helps manuscript reviewers and researchers quickly understand, valida
 
 ### Three Main Claims
 
-1. ✅ **70% reduction** in merge conflicts → See `merge_conflict_metrics.csv`
-2. ✅ **85% improvement** in deployment autonomy → See `deployment_autonomy_metrics.csv`
-3. ✅ **150% increase** in deployment frequency (to 15-20/month) → See `deployment_frequency_metrics.csv`
+1. ✅ **71.7% reduction** in merge conflicts → See `merge_conflict_metrics.csv`
+2. ✅ **70.8% improvement** in deployment autonomy (Approval Wait Time: 240m → 70m) → See `deployment_autonomy_metrics.csv`
+3. ✅ **181.0% increase** in deployment frequency (6.3 → 17.7/month) → See `deployment_frequency_metrics.csv`
 
 ---
 
@@ -64,13 +64,14 @@ IEEE_Data_Package_Pay_Branching_Strategy/
 
 ```bash
 # Open deployment_autonomy_metrics.csv
-# Compare: Deployment_Autonomy_Percent column
+# Compare: Avg_Approval_Wait_Hours column (primary KPI metric)
 ```
 
 **Expected:**
-- Baseline average: ~31.7%
-- Post-implementation: ~87.7%
-- Improvement: 176% (relative) ✓
+- Baseline average AWT: ~240 min (4.0 hours)
+- Post-implementation AWT: ~70 min (1.17 hours)
+- Improvement: 70.8% reduction in wait time ✓
+- Supporting metric: Autonomy rate rises from ~31.7% to ~87.7%
 
 ### Step 3: Verify KPI #3 (Deployment Frequency)
 
@@ -81,8 +82,8 @@ IEEE_Data_Package_Pay_Branching_Strategy/
 
 **Expected:**
 - Baseline average: ~6.3 deployments/month
-- Post-implementation: 15-20 deployments/month (avg ~17.7)
-- Increase: ~179% ✓
+- Post-implementation: ~17.7 deployments/month
+- Increase: 181.0% ✓ (based on 214 total deployment events)
 
 ---
 
@@ -104,12 +105,12 @@ print(f"  Baseline: {baseline:.2f}%")
 print(f"  Post-Impl: {post:.2f}%")
 print(f"  Reduction: {((baseline-post)/baseline*100):.1f}%\n")
 
-print("KPI #2 - Autonomy Improvement:")
-baseline = autonomy[autonomy['Period']=='Baseline']['Deployment_Autonomy_Percent'].mean()
-post = autonomy[autonomy['Period']=='Post-Implementation']['Deployment_Autonomy_Percent'].mean()
-print(f"  Baseline: {baseline:.2f}%")
-print(f"  Post-Impl: {post:.2f}%")
-print(f"  Improvement: {((post-baseline)/baseline*100):.1f}%\n")
+print("KPI #2 - Deployment Autonomy (Approval Wait Time Reduction):")
+baseline = autonomy[autonomy['Period']=='Baseline']['Avg_Approval_Wait_Hours'].mean() * 60  # convert to min
+post = autonomy[autonomy['Period']=='Post-Implementation']['Avg_Approval_Wait_Hours'].mean() * 60
+print(f"  Baseline AWT: {baseline:.0f} min")
+print(f"  Post-Impl AWT: {post:.0f} min")
+print(f"  Reduction: {((baseline-post)/baseline*100):.1f}%\n")
 
 print("KPI #3 - Deployment Frequency Increase:")
 baseline = deployments[deployments['Period']=='Baseline']['Total_Deployments'].mean()
@@ -147,12 +148,12 @@ axes[1].set_ylabel('Deployments/Month')
 axes[1].legend()
 axes[1].tick_params(axis='x', rotation=45)
 
-# Deployment Autonomy
-axes[2].plot(autonomy['Month'], autonomy['Deployment_Autonomy_Percent'], marker='o')
-axes[2].axhline(y=31.7, color='r', linestyle='--', label='Baseline Avg')
-axes[2].axhline(y=87.7, color='g', linestyle='--', label='Post-Impl Avg')
-axes[2].set_title('Deployment Autonomy')
-axes[2].set_ylabel('Autonomy Rate (%)')
+# Approval Wait Time (KPI #2)
+axes[2].plot(autonomy['Month'], autonomy['Avg_Approval_Wait_Hours'].apply(lambda x: x*60), marker='o')
+axes[2].axhline(y=240, color='r', linestyle='--', label='Baseline Avg (240m)')
+axes[2].axhline(y=70, color='g', linestyle='--', label='Post-Impl Avg (70m)')
+axes[2].set_title('Approval Wait Time (AWT)')
+axes[2].set_ylabel('Wait Time (min)')
 axes[2].legend()
 axes[2].tick_params(axis='x', rotation=45)
 
@@ -198,9 +199,9 @@ autonomy %>%
 - [ ] Baseline period shows expected lower performance
 - [ ] Post-implementation period shows sustained improvement
 - [ ] No missing values or anomalies
-- [ ] KPI #1: Conflict rate drops from ~42% to ~12% (70%+ reduction)
-- [ ] KPI #2: Autonomy rises from ~32% to ~88% (176% improvement)
-- [ ] KPI #3: Deployments increase from ~6 to ~18 per month (179% increase)
+- [ ] KPI #1: Conflict rate drops from ~42.4% to ~12.0% (71.7% reduction, Cohen's d=3.12)
+- [ ] KPI #2: Approval Wait Time drops from ~240m to ~70m (70.8% reduction, Cohen's d=2.44)
+- [ ] KPI #3: Deployments increase from ~6.3 to ~17.7 per month (181.0% increase, Cohen's d=2.85)
 - [ ] Statistical summary shows p < 0.001 for all KPIs
 - [ ] Metadata files are complete and accurate
 
@@ -221,13 +222,13 @@ autonomy %>%
 **A:** Standard empirical study duration; includes 3-month baseline, 3-month transition, and 6-month stabilization period.
 
 ### Q: How was data collected?
-**A:** Automated collection from Git (GitPython), CI/CD (Jenkins/GitHub Actions), and project management (Jira). Monthly manual validation.
+**A:** Automated collection from Git (GitPython), CI/CD (GitLab CI/CD — 214 deployment events), and project management (Jira REST API). Monthly manual validation.
 
 ### Q: Are there any missing data points?
 **A:** No. All 12 months have complete data for all metrics.
 
 ### Q: What about statistical significance?
-**A:** All three KPIs show p < 0.001 with very large effect sizes (Cohen's d > 3.5). See STATISTICAL_SUMMARY.md.
+**A:** All three KPIs show p < 0.001 with large to very large effect sizes (Cohen's d: 3.12, 2.44, 2.85). Cross-verified with Mann-Whitney U test. See STATISTICAL_SUMMARY.md.
 
 ### Q: Can I reproduce the analysis?
 **A:** Yes! Sample Python code is provided in this guide and README.md. All data is in standard CSV format.

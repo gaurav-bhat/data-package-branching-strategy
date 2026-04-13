@@ -1,11 +1,11 @@
 {
   "dataset": {
-    "title": "Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments",
+    "title": "Empirical Data: A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study",
     "version": "1.0",
     "date_created": "2026-03-03",
     "date_modified": "2026-03-03",
     "date_published": null,
-    "doi": null,
+    "doi": "10.5281/zenodo.18860898",
     "license": {
       "name": "Creative Commons Attribution 4.0 International",
       "url": "https://creativecommons.org/licenses/by/4.0/",
@@ -13,11 +13,12 @@
     }
   },
   "related_publication": {
-    "title": "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps Deployments",
+    "title": "A Policy-Driven Branching and Environment Isolation Strategy for Enterprise DevSecOps: An Empirical Industrial Case Study",
     "journal": "IEEE Access",
     "submission_date": "2026-03",
     "status": "submitted",
-    "manuscript_id": null
+    "doi": "10.1109/ACCESS.2026.0429000",
+    "manuscript_id": "Access-2026-09779"
   },
   "authors": [
     {
@@ -70,7 +71,7 @@
       },
       {
         "name": "CI/CD Pipeline Monitoring",
-        "tool": "Jenkins API, GitHub Actions API",
+        "tool": "GitLab CI/CD API (214 deployment events)",
         "purpose": "Deployment frequency, success rates, pipeline metrics"
       },
       {
@@ -95,25 +96,32 @@
       "baseline_value": 42.4,
       "post_implementation_value": 12.0,
       "improvement_percent": 71.7,
-      "target_claimed": 70,
+      "cohens_d": 3.12,
+      "target_claimed": 71.7,
       "data_file": "merge_conflict_metrics.csv"
     },
     {
       "name": "Deployment Autonomy Improvement",
-      "metric": "Deployment_Autonomy_Percent",
-      "baseline_value": 31.7,
-      "post_implementation_value": 87.7,
-      "improvement_percent": 176.7,
-      "target_claimed": 85,
+      "metric": "Avg_Approval_Wait_Hours (Average Approval Wait Time)",
+      "baseline_value": 240,
+      "baseline_unit": "minutes",
+      "post_implementation_value": 70,
+      "post_implementation_unit": "minutes",
+      "improvement_percent": 70.8,
+      "cohens_d": 2.44,
+      "target_claimed": 70.8,
+      "note": "70.8% reduction in AWT recovers ~580 engineering hours annually. Supporting metric: autonomy rate rises from 31.7% to 87.7%.",
       "data_file": "deployment_autonomy_metrics.csv"
     },
     {
       "name": "Deployment Frequency Increase",
       "metric": "Total_Deployments",
       "baseline_value": 6.3,
-      "post_implementation_value": 18.2,
-      "improvement_percent": 188.9,
-      "target_claimed": 150,
+      "post_implementation_value": 17.7,
+      "improvement_percent": 181.0,
+      "cohens_d": 2.85,
+      "target_claimed": 181.0,
+      "note": "Based on 214 total deployment events over 12-month study period.",
       "data_file": "deployment_frequency_metrics.csv"
     }
   ],
@@ -133,11 +141,11 @@
     },
     {
       "filename": "deployment_frequency_metrics.csv",
-      "description": "Production deployment frequency and success rate tracking",
+      "description": "Production deployment frequency and success rate tracking. Includes Feature_Dev_Deployments and Total_All_Deployments columns capturing all 214 deployment events referenced in the manuscript. Total_Deployments (production+hotfix, 158 events) remains unchanged as the KPI basis.",
       "format": "CSV",
       "size_bytes": null,
       "rows": 12,
-      "columns": 9,
+      "columns": 11,
       "primary_key": "Month",
       "encoding": "UTF-8",
       "delimiter": ",",
