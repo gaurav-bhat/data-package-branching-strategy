@@ -86,7 +86,7 @@
       "Automated data validation scripts",
       "Cross-validation across multiple data sources",
       "Monthly team review and verification",
-      "Statistical outlier detection"
+      "IQR outlier removal (1.5 × IQR): < 2% of raw deployment events excluded as anomalous infrastructure outages; all CSV files contain post-filtered data"
     ]
   },
   "key_performance_indicators": [

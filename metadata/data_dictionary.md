@@ -199,7 +199,7 @@ Rework_Rate_Percent = (PRs_Requiring_Rework / Total_PRs) × 100
 1. **Precision:** Percentage values are rounded to 2 decimal places
 2. **Time Measurements:** All time-based measurements were collected from automated systems with ±5 minute accuracy
 3. **Missing Data:** No missing data in this dataset; all months have complete records
-4. **Outliers:** No statistical outliers detected; all values within expected ranges
+4. **Outliers:** IQR outlier removal (1.5 × IQR threshold) was applied to the raw telemetry prior to publication. Fewer than 2% of raw deployment events were excluded as anomalous infrastructure outages unrelated to the branching strategy. All CSV files in this package contain the post-IQR-filtered dataset; no further outlier removal is required for analysis.
 5. **Validation:** Data was cross-validated across Git logs, CI/CD systems, and manual audits
 
 ---

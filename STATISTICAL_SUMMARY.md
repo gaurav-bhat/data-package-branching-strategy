@@ -201,7 +201,7 @@ All three primary KPIs show:
 - **Highly significant differences** (p < 0.001)
 - **Large to very large effect sizes** (Cohen's d ≥ 2.44)
 - **Sustained improvements** across 6-month post-implementation period
-- **No statistical outliers** in the data
+- **IQR outlier removal applied prior to analysis:** The Interquartile Range (IQR) method (threshold: 1.5 × IQR) was applied to the raw telemetry. Fewer than 2% of deployment events were excluded, corresponding to anomalous infrastructure outages unrelated to the branching strategy. All CSV files in this package contain the post-IQR-filtered dataset.
 
 ### Normality Tests
 
